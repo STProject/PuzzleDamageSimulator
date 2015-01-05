@@ -14,6 +14,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 
+/**
+ * @author togo
+ * @version $Revision$, 2015/01/06
+ */
 public class DamageCalculatoerTset {
 
   DamageCalculatoer calculater;
@@ -40,11 +44,14 @@ public class DamageCalculatoerTset {
 
   }
 
+  /**
+   * 属性強化覚醒（列強）のダメージ倍率テスト
+   */
   @SuppressWarnings("boxing")
   @Test
-  public void bonusOfAttributeEnhanced(){
-    assertThat(this.calculater.bonusOfAttributeEnhanced(5, 2), is(2.00));
-    assertThat(this.calculater.bonusOfAttributeEnhanced(5 ,1), is(not(1.00)));
+  public void bonusOfAttributeEnhance(){
+    assertThat(this.calculater.bonusOfAttributeEnhance(5, 2), is(2.00));
+    assertThat(this.calculater.bonusOfAttributeEnhance(5 ,1), is(not(1.00)));
     
   }
   /**

@@ -41,7 +41,7 @@ public class DamageCalculatoer {
    * @param column 消した列の数
    * @return 属性強化覚醒（列強）によるダメージ倍率
    */
-  public double bonusOfAttributeEnhanced(int arousal , int column){
+  public double bonusOfAttributeEnhance(int arousal , int column){
     double bonusOfArousal = arousal * 0.10  * column + 1.00;
     return bonusOfArousal;
   }
