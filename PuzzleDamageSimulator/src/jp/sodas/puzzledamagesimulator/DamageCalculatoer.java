@@ -25,6 +25,28 @@ public class DamageCalculatoer {
 
   }
   
+  /**
+   * コンボ数に応じたダメージ倍率を計算します
+   * @param combo コンボ数（combo >1)
+   * @return コンボ数によるダメージ倍率
+   */
+  public double bonusOfCombo(int combo){
+    double bonusOfCombo =(combo -1 ) *  0.25 + 1.00;
+    return bonusOfCombo;
+  }
+  
+  /**
+   * 属性強化覚醒（列強）に応じたダメージ倍率を計算します
+   * @param arousal 属性強化覚醒（列強）の数
+   * @param column 消した列の数
+   * @return 属性強化覚醒（列強）によるダメージ倍率
+   */
+  public double bonusOfAttributeEnhanced(int arousal , int column){
+    double bonusOfArousal = arousal * 0.10  * column + 1.00;
+    return bonusOfArousal;
+  }
+  
+  
   
 
 }
