@@ -10,17 +10,22 @@ package jp.sodas.puzzledamagesimulator;
  * @version $Revision$, 2015/01/06
  */
 public class DamageCalculatoer {
-
+  /**
+   * ドロップ強化覚醒の倍率
+   * */
+  private final double MAGNIFICATION_OF_ENHANCEDROP =0.05;
   /**
    * ドロップ数に応じたダメージ倍率を計算します
    * 
    * @param drops 同時に消したドロップ数（3－30）
    * @param enhancedDrops 強化されたドロップの数(drops >= enhancedDrops)
+   * @param arousal ドロップ強化の覚醒数
    * @return ドロップ数によるダメージ倍率
    */
-  public double BonusOfDrops(int drops, int enhancedDrops) {
-    double bonusOfDrops = (drops + 1) * 0.25;
-    bonusOfDrops = bonusOfDrops * (enhancedDrops * 0.06 + 1.00);
+  public double BonusOfDrops(int drops, int enhancedDrops , int arousal) {
+    double bonusOfDrops = (drops + 1) * 0.25;//ドロップ数による倍率
+    bonusOfDrops = bonusOfDrops * (enhancedDrops * 0.06 + 1.00);//強化ドロップの倍率
+    bonusOfDrops = bonusOfDrops * (arousal * this.MAGNIFICATION_OF_ENHANCEDROP+ 1.00);//ドロップ強化の覚醒による倍率
     return bonusOfDrops;
 
   }
