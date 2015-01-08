@@ -11,6 +11,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.hamcrest.core.*;
 
+import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNot.not;
@@ -31,6 +33,7 @@ public class MonsterTset {
   public void readMonsterByNameTest() {
     this.monster.readMonsterByname("大花龍ブラキオス"); //$NON-NLS-1$
     this.monster.showMonsterData();
+    assertThat(this.monster.getArousals().length,is(3));
 
   }
 
@@ -45,6 +48,7 @@ public class MonsterTset {
     assertThat(this.monster.getHP(), is(1292));
     assertThat(this.monster.getAttack(), is(656));
     assertThat(this.monster.getResilience(), is(49));
+    assertThat(this.monster.getArousals().length,is(0));
   }
 
   /**

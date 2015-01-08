@@ -28,6 +28,7 @@ public class Monster {
   private String skillName;
   private String leaderSkillName;
   private int numbaerOfArousal;
+  private int currentArousals;
   private int MaxHP;
   private int MaxAttack;
   private int MaxResilience;
@@ -144,7 +145,7 @@ public class Monster {
     this.ResilienceIndex = Double.parseDouble(data[22]);
     arousals = new Arousal[numbaerOfArousal];
     for(int i = 0; i < numbaerOfArousal; i++){
-    	arousals[i] = data[23+i];
+    	arousals[i] = new Arousal(data[23+i]);
     }
 
   }
@@ -339,4 +340,8 @@ public class Monster {
   public void setCurrentLv(int currentLv) {
     this.currentLv = currentLv;
   }
+
+public void setCurrentArousals(int currentArousals) {
+	this.currentArousals = currentArousals;
+}
 }
