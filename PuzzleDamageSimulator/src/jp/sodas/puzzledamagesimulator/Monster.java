@@ -35,7 +35,7 @@ public class Monster {
   private double HPIndex;
   private double AttackIndex;
   private double ResilienceIndex;
-  private ArrayList<Arousal> arousals;
+  private Arousal[] arousals;
   private int HP;
   private int Attack;
   private int Resilience;
@@ -277,7 +277,7 @@ public class Monster {
   }
 
   
-  public ArrayList<Arousal> getArousals() {
+  public Arousal[] getArousals() {
     return arousals;
   }
 
