@@ -7,36 +7,45 @@ package jp.sodas.puzzledamagesimulator;
 
 import java.util.ArrayList;
 
-
 public class ComboList {
 
-  private static ArrayList<Combo> comboList;
+	private static ArrayList<Combo> comboList;
 
-  /**
-   * コンボをリストに加えます
-   * 
-   * @param combo コンボ
-   */
-  public void addCombo(Combo combo) {
-    comboList.add(combo);
+	/**
+	 * コンボをリストに加えます
+	 * 
+	 * @param combo
+	 *            コンボ
+	 */
+	public void addCombo(Combo combo) {
+		comboList.add(combo);
 
-  }
+	}
 
-  /**
-   * コンボリストをクリアーします ダメージ計算が終わるたびに実行させます
-   * */
-  public void clearComboList() {
-    comboList.clear();
-  }
+	/**
+	 * コンボリストをクリアーします ダメージ計算が終わるたびに実行させます
+	 * */
+	public void clearComboList() {
+		comboList.clear();
+	}
 
-  /**
-   * 合計のコンボ数を返します
-   * 
-   * @return コンボ数
-   */
-  public int numberOfCombo() {
-    return comboList.size();
+	/**
+	 * 合計のコンボ数を返します
+	 * 
+	 * @return コンボ数
+	 */
+	public int numberOfCombo() {
+		return comboList.size();
 
-  }
+	}
+
+	public void addComboList(Combo combo) {
+		comboList.add(combo);
+	}
+
+	public Combo getCombo(int i) {
+		return comboList.get(i);
+
+	}
 
 }

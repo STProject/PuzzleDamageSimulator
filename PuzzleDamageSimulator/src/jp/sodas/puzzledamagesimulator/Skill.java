@@ -33,5 +33,7 @@ public class Skill {
 		if(targerMonster.getSubType().equals(target)) return magnification;
 		return 1.0;
 	}
+	
+	
 
 }

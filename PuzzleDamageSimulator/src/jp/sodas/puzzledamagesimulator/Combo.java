@@ -34,6 +34,14 @@ public class Combo {
     this.isColumn = isColumn;
 
   }
+
+public String getAttribute() {
+	return attribute;
+}
+
+public boolean isColumn() {
+	return isColumn;
+}
   
   
 

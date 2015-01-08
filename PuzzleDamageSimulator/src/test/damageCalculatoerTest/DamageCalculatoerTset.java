@@ -31,6 +31,7 @@ public class DamageCalculatoerTset {
     assertThat(this.calculater.BonusOfDrops(3, 0, 0), is(1.00));
     assertThat(this.calculater.BonusOfDrops(3, 0, 0), is(not(2.00)));
     assertThat(this.calculater.BonusOfDrops(3, 3, 0), is(1.18));
+    assertThat(this.calculater.BonusOfDrops(3, 0, 5), is(1.0));
     assertThat(this.calculater.BonusOfDrops(3, 3, 6), is(1.534));
 
   }

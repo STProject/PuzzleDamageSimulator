@@ -5,11 +5,17 @@
  */
 package jp.sodas.puzzledamagesimulator;
 
+import javax.lang.model.type.PrimitiveType;
+
+import sun.security.mscapi.KeyStore.MY;
+
 import com.sun.java.swing.plaf.motif.resources.motif;
 
 public class Team {
 	private Monster[] teamMenber;
 	private final int MAX_MENBER =6;
+	private LeaderSkill myLeaderSkill;
+	private LeaderSkill friendLeaderSkill;
 
 	public Team() {
 		teamMenber = new Monster[MAX_MENBER];
@@ -22,6 +28,23 @@ public class Team {
 	public void setMenber(Monster monster, int position){
 		teamMenber[position] = monster;
 	}
+
+	public LeaderSkill getMyLeaderSkill() {
+		return myLeaderSkill;
+	}
+
+	public void setMyLeaderSkill(LeaderSkill myLeaderSkill) {
+		this.myLeaderSkill = myLeaderSkill;
+	}
+
+	public LeaderSkill getFriendLeaderSkill() {
+		return friendLeaderSkill;
+	}
+
+	public void setFriendLeaderSkill(LeaderSkill friendLeaderSkill) {
+		this.friendLeaderSkill = friendLeaderSkill;
+	}
+	
 	
 	
 }
