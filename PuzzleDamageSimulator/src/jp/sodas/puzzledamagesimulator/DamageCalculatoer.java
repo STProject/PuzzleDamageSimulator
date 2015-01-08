@@ -10,11 +10,7 @@ package jp.sodas.puzzledamagesimulator;
  * @version $Revision$, 2015/01/06
  */
 public class DamageCalculatoer {
-	/**
-	 * ドロップ強化覚醒の倍率
-	 * */
-	private final double MAGNIFICATION_OF_ENHANCEDROP = 0.05;
-
+	
 	/**
 	 * ドロップ数に応じたダメージ倍率を計算します
 	 * 
@@ -31,7 +27,7 @@ public class DamageCalculatoer {
 		bonusOfDrops = bonusOfDrops * (enhancedDrops * 0.06 + 1.00);// 強化ドロップの倍率
 		if (enhancedDrops > 0) {
 			bonusOfDrops = bonusOfDrops
-					* (arousal * this.MAGNIFICATION_OF_ENHANCEDROP + 1.00);// ドロップ強化の覚醒による倍率
+					* (arousal * Arousal.MAGNIFICATION_OF_ENHANCEDROP + 1.00);// ドロップ強化の覚醒による倍率
 		}
 		return bonusOfDrops;
 
@@ -63,12 +59,26 @@ public class DamageCalculatoer {
 		return bonusOfArousal;
 	}
 
+	public double bonusOf2way(int arousals) {
+		return Math.pow(Arousal.MAGNIFICATION_OF_2WAY, arousals);
+	}
+
 	public double bonusOfLeaderSkill(LeaderSkill skill, Monster targetMonster) {
 		return skill.whetherLeaderSkill(targetMonster);
 	}
 
 	public int mainAttributeDamage(Monster target, ComboList comboList) {
-
+		double damage = 0;
+		Combo combo;
+		for (int i = 0; i < comboList.getSize(); i++) {
+			combo = comboList.getCombo(i);
+			if (combo.getAttribute().equals(target.getMainAtrribute())) {
+				damage += target.getAttack() * bonusOf2way(arousals)
+						* BonusOfDrops(drops, enhancedDrops, arousal);
+			}
+		}
+		damage = damage*bonusOfCombo(comboList.getSize())*bonusOfAttributeEnhance(arousal, column)*bonusOfLeaderSkill(skill, targetMonster)*bonusOfLeaderSkill(skill, targetMonster);
+	
 	}
 
 }

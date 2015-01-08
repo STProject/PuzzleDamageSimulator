@@ -47,5 +47,10 @@ public class ComboList {
 		return comboList.get(i);
 
 	}
+	
+	public int getSize() {
+		return comboList.size();
+		
+	}
 
 }

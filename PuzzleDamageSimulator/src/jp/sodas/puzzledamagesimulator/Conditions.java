@@ -2,11 +2,11 @@ package jp.sodas.puzzledamagesimulator;
 
 import javax.swing.text.StyledEditorKit.ForegroundAction;
 
-public class Skill {
+public class Conditions {
 	private String target;
 	private double magnification;
 
-	public Skill(String target2, double magnification2) {
+	public Conditions(String target2, double magnification2) {
 		// TODO Auto-generated constructor stub
 		target = target2;
 		magnification = magnification2;

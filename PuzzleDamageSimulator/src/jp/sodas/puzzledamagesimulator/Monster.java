@@ -142,6 +142,10 @@ public class Monster {
     this.HPIndex = Double.parseDouble(data[20]);
     this.AttackIndex = Double.parseDouble(data[21]);
     this.ResilienceIndex = Double.parseDouble(data[22]);
+    arousals = new Arousal[numbaerOfArousal];
+    for(int i = 0; i < numbaerOfArousal; i++){
+    	arousals[i] = data[23+i];
+    }
 
   }
 

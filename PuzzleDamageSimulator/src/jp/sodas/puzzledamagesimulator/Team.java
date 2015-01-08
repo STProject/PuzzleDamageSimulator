@@ -7,7 +7,7 @@ package jp.sodas.puzzledamagesimulator;
 
 import javax.lang.model.type.PrimitiveType;
 
-import sun.security.mscapi.KeyStore.MY;
+
 
 import com.sun.java.swing.plaf.motif.resources.motif;
 

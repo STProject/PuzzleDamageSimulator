@@ -7,7 +7,7 @@ import com.sun.corba.se.pept.transport.ContactInfo;
 
 public class LeaderSkill {
 
-	private ArrayList<Skill> conditions;
+	private ArrayList<Conditions> conditions;
 
 	public double whetherLeaderSkill(Monster targetMonster) {
 		double magnification = 1.0;
@@ -22,7 +22,7 @@ public class LeaderSkill {
 	}
 
 	public void addConditions(String target, double magnification) {
-		conditions.add(new Skill(target, magnification));
+		conditions.add(new Conditions(target, magnification));
 	}
 
 }
