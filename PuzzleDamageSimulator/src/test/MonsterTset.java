@@ -9,13 +9,8 @@ import jp.sodas.puzzledamagesimulator.Monster;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.hamcrest.core.*;
-
-import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
-
 import static org.junit.Assert.*;
 import static org.hamcrest.core.Is.is;
-import static org.hamcrest.core.IsNot.not;
 
 
 /**
@@ -29,6 +24,7 @@ public class MonsterTset {
   /**
 	 * 
 	 */
+  @SuppressWarnings("boxing")
   @Test
   public void readMonsterByNameTest() {
     this.monster.readMonsterByname("大花龍ブラキオス"); //$NON-NLS-1$
@@ -37,10 +33,13 @@ public class MonsterTset {
 
   }
 
+  /**
+   * test
+   */
   @SuppressWarnings("boxing")
   @Test
   public void readMonsterTest() {
-    this.monster.readMonsterByname("ダークゴーレムMk-II");
+    this.monster.readMonsterByname("ダークゴーレムMk-II"); //$NON-NLS-1$
     this.monster.setCurrentLv(37);
     this.monster.setHPPlus(1);
     this.monster.calculateCurrentStatus();

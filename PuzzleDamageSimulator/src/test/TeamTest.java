@@ -12,19 +12,26 @@ import static org.junit.Assert.*;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNot.not;
 
+/**
+ * @author togo
+ * @version $Revision$, 2015/01/09
+ */
 public class TeamTest {
 
 	private Team team;
 
+	/**
+	 * test
+	 */
 	@Test
 	public void AddMenber() {
 		Monster monster = new Monster();
-		monster.readMonsterByname("ダークゴーレムMk-II");
+		monster.readMonsterByname("ダークゴーレムMk-II"); //$NON-NLS-1$
 		monster.setCurrentLv(37);
 		monster.setHPPlus(1);
 		monster.calculateCurrentStatus();
 		
-		team.setMenber(monster, 0);
+		this.team.setMenber(monster, 0);
 		assertTrue(true);
 	}
 
