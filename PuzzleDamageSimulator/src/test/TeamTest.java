@@ -7,7 +7,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.hamcrest.core.*;
 
-import sun.awt.geom.AreaOp.AddOp;
 import static org.junit.Assert.*;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNot.not;
@@ -26,7 +25,7 @@ public class TeamTest {
 	@Test
 	public void AddMenber() {
 		Monster monster = new Monster();
-		monster.readMonsterByname("ダークゴーレムMk-II"); //$NON-NLS-1$
+		monster.readMonsterByname("繝�繝ｼ繧ｯ繧ｴ繝ｼ繝ｬ繝�Mk-II"); //$NON-NLS-1$
 		monster.setCurrentLv(37);
 		monster.setHPPlus(1);
 		monster.calculateCurrentStatus();
@@ -36,7 +35,7 @@ public class TeamTest {
 	}
 
 	/**
-	 * テストの前に行う処理
+	 * 繝�繧ｹ繝医�ｮ蜑阪↓陦後≧蜃ｦ逅�
 	 */
 	@Before
 	public void beforeTest() {

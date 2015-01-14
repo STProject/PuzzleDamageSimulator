@@ -5,11 +5,6 @@
  */
 package jp.sodas.puzzledamagesimulator;
 
-import javax.lang.model.type.PrimitiveType;
-
-
-
-import com.sun.java.swing.plaf.motif.resources.motif;
 
 public class Team {
 	private Monster[] teamMenber;

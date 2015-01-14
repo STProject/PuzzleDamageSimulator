@@ -7,7 +7,7 @@
     
 	<fragment
         android:id="@+id/fragment_simulator"
-        android:name="jp.sodas.puzzledamagesimulator.SimulatorFragment"
+        android:name="jp.sodas.puzzledamagesimulator.PanelFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 </LinearLayout>

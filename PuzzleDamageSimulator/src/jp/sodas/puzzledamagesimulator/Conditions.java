@@ -1,6 +1,6 @@
 package jp.sodas.puzzledamagesimulator;
 
-import javax.swing.text.StyledEditorKit.ForegroundAction;
+
 
 public class Conditions {
 	private String target;

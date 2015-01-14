@@ -3,7 +3,6 @@ package jp.sodas.puzzledamagesimulator;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.sun.corba.se.pept.transport.ContactInfo;
 
 public class LeaderSkill {
 
